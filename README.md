@@ -1,3 +1,3 @@
-<p> This specific <b>v-m-r/java</b> is about covering the all the basic java programs. This repository consists of all-most every basic program and different ways of writing every single program each day a program will be upload. </p>
+<p> This specific <b>v-m-r/java</b> repository is about covering the all the basic java programs. This repository consists of all-most every basic program and different ways of writing every single program each day a program will be upload. </p>
 <p><b>Developer</b> who are interested to contribute can pull the repository to your own console can add more different way of writing the java programs. <b>Developer</b> if have improved version of the code such as less time and space complexive, less time complexive and less space complexive have to arrange the programs relatively in acsending order and commenting the other programs</p>
 <p>Lets us start</p>
