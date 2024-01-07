@@ -11,8 +11,9 @@ public class ArrayIt{
     //iteration of the multidimentional array starts here
     for (int i []: arr) {
       for (int j: i) {
-        System.out.println(j+" ");
-      }  
+        System.out.print(j+" ");
+      }
+      System.out.println();
     }
   }
 }
