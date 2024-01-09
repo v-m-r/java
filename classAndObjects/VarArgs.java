@@ -11,5 +11,6 @@ public class VarArgs {
     Disp(n);
     Disp(o);
     Disp(p);
+    Disp(1,2,3,4,5,6);
   }
 }
