@@ -7,11 +7,11 @@ import java.lang.annotation.*;
 }
 public class Main {
   @MyAnno(str="MyAnnotation",a=10)
-  public static void myMeth() {
+  public static void myMeth(int ex,int d) {
   Main obj = new Main();
     try {
    Class <?> c =  obj.getClass();
-    Method m = c.getMethod("myMeth");
+    Method m = c.getMethod("myMeth",int.class,int.class);
     MyAnno b = m.getAnnotation(MyAnno.class);
     System.out.println(b.str()+" "+b.a());
     } catch (Exception e) {
@@ -19,6 +19,6 @@ public class Main {
     }
   }
   public static void main(String[] args) {
-    myMeth();
+    myMeth(1,2);
   }
 }
