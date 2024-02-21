@@ -1,4 +1,4 @@
-import java.util.HashMap;
+import java.util.*;
 
 public class HashmapDemo {
 public static void main(String[] args) {
@@ -6,11 +6,13 @@ public static void main(String[] args) {
     hm.put(1,1);
     hm.put(2,2);
     hm.put(3,4);
-    hm.put(4, 5);
-    System.out.println(hm.keySet());
-    System.out.println(hm.values());
-    for(int i:hm.keySet()){
-        System.out.println(i+" ValueS "+hm.get(i));
+    hm.put(4,5);
+    Set<Map.Entry<Integer,Integer>> set = hm.entrySet();
+    for(Map.Entry<Integer,Integer> b: set){
+        System.out.print(b.getKey()+" : ");
+        System.out.println(b.getValue()); 
     }
+    hm.put(1, 12);
+    System.out.println("1's val : "+hm.get(1));
 }
 }
