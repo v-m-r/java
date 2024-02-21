@@ -1,10 +1,13 @@
 import java.util.*;
-import java.util.function.Consumer;
 public class ListDemo {
 
-   public static void main(String[] args) {
+   /**
+ * @param args
+ */
+public static void main(String[] args) {
     Random r = new Random();
     ArrayList<Integer> list = new ArrayList<Integer>();
+    ArrayList<Integer> l2= new ArrayList<Integer>();
     for (int i = 0; i < 10; i++) {
         list.add(r.nextInt(10));
     }
@@ -12,11 +15,23 @@ public class ListDemo {
     System.out.println("Elements of the List: "+list);
     ListIterator<Integer> i = list.listIterator();
    System.out.println("Elments using iterator: ");
+   System.out.println("printing using Iterator: ");
     while(i.hasNext())
         System.out.print(i.next()+" ");
     System.out.println();
+   System.out.println("Print using ListIterator");
     while (i.hasPrevious()) 
        System.out.print(i.previous()+" "); 
+    System.out.println();
+    System.out.println("Print using Spliterator: ");
+    Spliterator<Integer> sp = list.spliterator();
+    while(sp.tryAdvance(System.out::print))
+    System.out.print(" ");
+    System.out.println();
+    System.out.println("Getting values while try advance: ");
+    sp = l2.spliterator();
+    while(sp.tryAdvance((n)->l2.add(r.nextInt(n))));
+    sp.forEachRemaining((n)->System.out.println(n));
     System.out.println();
     System.out.println("LinkedList");
     LinkedList<Integer> ll = new LinkedList<Integer>(list);
