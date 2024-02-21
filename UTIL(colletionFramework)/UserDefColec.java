@@ -14,7 +14,6 @@ class Address{
     public String toString() {
         return String.join(", ",name,address,state,num);
     }
-
 }
 public class UserDefColec {
     public static void main(String[] args) {
@@ -28,5 +27,4 @@ public class UserDefColec {
             System.out.println(a);
         }
     }
-
 }
