@@ -13,26 +13,24 @@ public static void main(String[] args) {
     }
     System.out.println("Size of the list: "+list.size());
     System.out.println("Elements of the List: "+list);
+    // -----------------------------------------------------------
     ListIterator<Integer> i = list.listIterator();
-   System.out.println("Elments using iterator: ");
    System.out.println("printing using Iterator: ");
     while(i.hasNext())
         System.out.print(i.next()+" ");
     System.out.println();
+    // -----------------------------------------------------------
    System.out.println("Print using ListIterator");
     while (i.hasPrevious()) 
        System.out.print(i.previous()+" "); 
     System.out.println();
+    // -----------------------------------------------------------
     System.out.println("Print using Spliterator: ");
     Spliterator<Integer> sp = list.spliterator();
     while(sp.tryAdvance(System.out::print))
     System.out.print(" ");
     System.out.println();
-    System.out.println("Getting values while try advance: ");
-    sp = l2.spliterator();
-    while(sp.tryAdvance((n)->l2.add(r.nextInt(n))));
-    sp.forEachRemaining((n)->System.out.println(n));
-    System.out.println();
+    // -----------------------------------------------------------
     System.out.println("LinkedList");
     LinkedList<Integer> ll = new LinkedList<Integer>(list);
     System.out.println(ll);
@@ -44,11 +42,14 @@ public static void main(String[] args) {
     last = ll.getLast();
     System.out.format("first: %d and last %d \n",first,last); 
     System.out.println("HashSets: ");
+    // -----------------------------------------------------------
     HashSet<Integer> hs = new HashSet<Integer>(list);
     System.out.println("Elements in hashset:" +hs);
+    // -----------------------------------------------------------
     LinkedHashSet<Integer> lhs = new LinkedHashSet<Integer>(list);
     System.out.println("Elements in Linkedhashset:" +lhs);
     System.out.println("Treesets");
+    // -----------------------------------------------------------
     TreeSet<Integer> t = new TreeSet<Integer>(list);
     System.out.println("Content of tree "+t);
    }
