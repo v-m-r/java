@@ -3,7 +3,7 @@ public class ListDemo {
 public static void main(String[] args) {
     Random r = new Random();
     ArrayList<Integer> list = new ArrayList<Integer>();
-    ArrayList<Integer> l2= new ArrayList<Integer>();
+    ArrayList<String> l2= new ArrayList<>();
     for (int i = 0; i < 10; i++) {
         list.add(r.nextInt(10));
     }
@@ -24,6 +24,12 @@ public static void main(String[] args) {
     System.out.println("Print using Spliterator: ");
     Spliterator<Integer> sp = list.spliterator();
     while(sp.tryAdvance(System.out::print))
+    System.out.print(" ");
+    System.out.println();
+    sp = list.spliterator();
+    while(sp.tryAdvance((n)->l2.add(String((n*2)+" "))));
+    Spliterator<String> sstr = l2.spliterator();
+    sstr.forEachRemaining(System.out::print);
     System.out.print(" ");
     System.out.println();
     // -----------------------------------------------------------
@@ -49,4 +55,8 @@ public static void main(String[] args) {
     TreeSet<Integer> t = new TreeSet<Integer>(list);
     System.out.println("Content of tree "+t);
    }
+
+private static String String(String string) {
+    return string;
+}
 }
