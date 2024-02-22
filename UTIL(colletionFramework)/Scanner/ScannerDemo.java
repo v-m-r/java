@@ -18,7 +18,7 @@ public class ScannerDemo{
                     return;
             }
         }
-        scr.close();
-        System.out.format("Avg : "+(sum/count));
-    }
-}
+        scr.close() ;
+         System.out.format("Avg : "+(sum/count));
+     }
+  }

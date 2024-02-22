@@ -8,7 +8,7 @@ public class FileScanner {
        FileInputStream fin = new FileInputStream("Text.txt");
        Scanner scr = new Scanner(fin);
        int sum = 0, count = 0;
-        while (scr.hasNext()) {
+        while (scr.hasNext())  {
             if (scr.hasNextInt()) {
                 sum += scr.nextInt();
                 count++;
