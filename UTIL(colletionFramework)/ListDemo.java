@@ -1,9 +1,5 @@
 import java.util.*;
 public class ListDemo {
-
-   /**
- * @param args
- */
 public static void main(String[] args) {
     Random r = new Random();
     ArrayList<Integer> list = new ArrayList<Integer>();

@@ -8,6 +8,5 @@ public class StringBufDemo{
         System.out.println(sb+" ");
         System.out.println(sb.capacity());
         System.out.println(sb.length());
-        sb.System.out::println();
     }
 }

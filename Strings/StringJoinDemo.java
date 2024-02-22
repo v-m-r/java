@@ -4,7 +4,6 @@ public class StringJoinDemo {
     System.out.println(s);
     s = "      "+s;
     System.out.println(s);
-    
     System.out.println(s.stripLeading());
 }
 }
